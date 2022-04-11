@@ -2,7 +2,7 @@
   <div id="app">
 <nav class="navbar navbar-expand-lg navbar-light p-3">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img src="@/assets/logo.png" alt="APCB" width="60" height="60"></a>
+    <a class="navbar-brand" href=""><img src="@/assets/logo.png" alt="APCB" width="60" height="60"></a>
     <div class="" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
@@ -46,7 +46,6 @@
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
       /* background-image: url("https://tailwindcss.com/_next/static/media/hero@75.4dea7abe609fc522c039fba7662ceea2.jpg");
       background-repeat: no-repeat;

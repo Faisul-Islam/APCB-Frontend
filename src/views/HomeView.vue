@@ -1,6 +1,6 @@
 <template>
-  <div class="container-md text-center mx-auto">
- <div v-if="!loading">
+  <div class="container-md">
+ <div class="text-center  mx-auto" v-if="!loading && response === undefined">
        <div class="content px-5 pb-2">
       <img
         src="@/assets/illustration-pc.svg"
@@ -33,7 +33,8 @@
       </div>
     </div>
  </div>
-    <apcb-loader v-if="loading"></apcb-loader>
+    <apcb-loader class="text-center  mx-auto" v-if="loading  && response === undefined"></apcb-loader>
+    <components-list :response="response"  v-if="!loading  && response !== undefined"></components-list>
   </div>
 </template>
 
@@ -41,15 +42,18 @@
 // @ is an alias to /src
 /* eslint-disable */
 import ApcbLoader from "@/components/ApcbLoader";
+import ComponentsList from "@/views/ComponentsList";
 import axios from "axios";
 export default {
   components: {
-    ApcbLoader
+    ApcbLoader,
+    ComponentsList
   },
   data(){
     return {
       loading: false,
       price: 0,
+      response: undefined,
     }
   },
   methods: {
@@ -59,10 +63,11 @@ export default {
         url: `https://auto-pc-builder.herokuapp.com/apcb/get/b=amd&p=${this.price}`
       }).then(res => {
         console.log(res);
+        this.response = res.data;
       }).catch(err => {
 
       }).finally(() => {
-
+       this.loading = false;
       });
     }
   }

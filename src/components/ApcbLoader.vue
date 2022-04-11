@@ -27,7 +27,7 @@ export default {
       setInterval(
         function () {
           this.idx < this.qoute.length - 1 ? (this.idx += 1) : (this.idx = 0);
-          console.log(this.idx);
+         // console.log(this.idx);
         }.bind(this),
         4000
       );
