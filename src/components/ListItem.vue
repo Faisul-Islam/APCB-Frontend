@@ -1,12 +1,13 @@
 <template>
   <div class="card">
-    <div class="card-body list-item p-1">
+      <a :href="listData.link" target="_blank" rel="noopener noreferrer">
+    <div class="card-body list-item p-2">
       <div class="row">
-        <div class="col-2">
+        <div class="col-4 col-md-2">
           <img
             :src="listData.image"
             width="120px"
-            class="img-fluid ml-2"
+            class="img-fluid"
             :alt="title"
           />
         </div>
@@ -15,12 +16,13 @@
       <b>{{ title }}</b>
     </h4>
           <h5 class="card-title py-1">{{ listData.name }}</h5>
-          <p class="card-text py-2">
+          <p class="card-text py-0 py-md-2">
             <b>{{ listData.price }}</b> ৳
           </p>
         </div>
       </div>
     </div>
+    </a>
   </div>
 </template>
 
@@ -41,4 +43,17 @@ export default {
     background-color:#e9e9e9;
     cursor: pointer;
 }
+a{
+    color: black;
+}
+a:link { text-decoration: none; }
+
+
+a:visited { text-decoration: none; }
+
+
+a:hover { text-decoration: none; }
+
+
+a:active { text-decoration: none; }
 </style>
