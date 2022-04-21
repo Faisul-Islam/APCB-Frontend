@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <!-- <d-card l="145px" t="320px" w="120px" h="120px" class="asl"></d-card>
-    <d-card l="185px" t="220px" w="40px" h="40px"></d-card>
+    <!-- <d-card l="145px" t="320px" w="520px" h="520px"  d="120deg" class="asl"></d-card> -->
+    <!-- <d-card l="185px" t="220px" w="40px" h="40px"></d-card>
     <d-card l="85px" t="270px" w="70px" h="70px"></d-card>
     <d-card l="255px" t="110px" w="85px" h="85px"></d-card>
     <d-card l="185px" t="300px" w="80px" h="80px"></d-card>
@@ -63,7 +63,7 @@ export default {
 .secondary-color-text {
   color: #f05760;
 }
-.btn-primary {
+/* .btn-primary {
   color: #fff;
   background-color: #4c4086;
   border-color: #4c4086;
@@ -72,6 +72,22 @@ export default {
   color: #fff;
   background-color: #796db8;
   border-color: #796db8;
+} */
+.btn-primary{
+      min-width: 138px;
+    max-width: -webkit-fit-content;
+    max-width: fit-content;
+    max-width: -moz-fit-content;
+    width: 100%;
+    height: 50px;
+    background: #7b68ee;
+    border-radius: 8px;
+    border: 1px solid #7b68ee;
+    box-shadow: 0 10px 25px rgb(123 104 238 / 50%) !important;
+}
+.btn-primary:hover {
+    background: #5c4dbc;
+    border: 1px solid #5c4dbc;
 }
 #app {
   font-family: "Inter", sans-serif;
@@ -80,7 +96,8 @@ export default {
   color: #2c3e50;
   position: relative;
   /* background: linear-gradient(to right,#acb6e5,#86fde8); */
-  background: linear-gradient(to right, #d3cce3, #e9e4f0);
+  /* background: linear-gradient(to right, #d3cce3, #e9e4f0); */
+  background: linear-gradient(to right, #e1dfe6, #f2eef8);
   height: 100vh;
   /* background-image: url("https://tailwindcss.com/_next/static/media/hero@75.4dea7abe609fc522c039fba7662ceea2.jpg");
       
@@ -94,6 +111,7 @@ h1 {
   background: rgba(255, 255, 255, 0.4);
   border-radius: 8px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+   /* box-shadow: 0 10px 25px rgb(123 104 238 / 50%) !important; */
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
